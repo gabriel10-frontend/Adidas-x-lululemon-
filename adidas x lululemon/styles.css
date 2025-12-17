@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #000000;
+      --clr: #e00000;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      transition-delay: 0.5s;
+    }
+
+    .card:hover {
+      width: 650px;
+      transition-delay: 0.5s;
+    }
+
+    .card .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card .circle::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 8px solid var(--clr);
+      transition: 0.5s, background 0.5s;
+      transition-delay: 0.75s, 1s;
+      filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 60px var(--clr));
+    }
+
+    .card:hover .circle::before {
+      transition-delay: 0.5s;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      background: var(--clr);
+    }
+
+    .card .circle .logo {
+      position: relative;
+      width: 200px;
+      transition: 0.5s;
+      transition-delay: 0.5s;
+      z-index: 1;
+    }
+
+    .card:hover .circle .logo {
+      transform: scale(0);
+      transition-delay: 0s;
+    }
+
+    .card .product_img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -30%) scale(0) rotate(315deg);
+      height: 300px;
+      transition: 0.5s ease-in-out;
+    }
+
+    .card:hover .product_img {
+      transition-delay: 0.75s;
+      top: 50%;
+      left: 70%;
+      height: 390px;
+      transform: translate(-50%, -50%) scale(1) rotate(15deg);
+    }
+
+    .card .content {
+      position: absolute;
+      width: 50%;
+      left: 20%;
+      padding: 20px;
+      opacity: 0;
+      transition: 0.5s;
+      visibility: hidden;
+    }
+
+    .card:hover .content {
+      transition-delay: 0.75s;
+      opacity: 1;
+      visibility: visible;
+      left: 20px;
+    }
+
+    .card .content h2 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 2em;
+      line-height: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .card .content p {
+      color: #fff;
+      font-size: 0.85em;
+      line-height: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .card .content a {
+      position: relative;
+      color: #fff;
+      background: #000000;
+      padding: 10px 25px;
+      border-radius: 10px;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 10px;
+      border: 2px solid #fff;
+      transition: 0.3s;
+    }
+
+    .card .content a:hover {
+      background: #fff;
+      color: #000;
+    }
+
+
+    .logo-placeholder, .product-placeholder {
+      background: linear-gradient(135deg, #666, #999);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .logo-placeholder {
+      width: 200px;
+      height: 80px;
+      border-radius: 10px;
+    }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>catalogo</title>
+    <link rel="stylesheet" href="./styles.css">
+    
+</head>
+<body>
+  <header style="text-align: center;">
+   <img src="logo.png" height="150" width="250" >
+
+
+
+  </header>
+
+    <div class="container">
+      <div class="slide">
+        <div
+          class="item"
+          style="
+            background-image: url('producto4.png');
+           background-position: 40%;"
+          data-image="pro4.png">
+        
+          <div class="content">
+            <div class="name">Calzado de Alto Rendimiento y Estilo de Vida</div>
+            <div class="des">
+              Zapatillas de Running Ultra-Premium: Combinaría la legendaria tecnología de amortiguación de Adidas (como Boost o Lightstrike)
+            </div>
+            <button class="seeMore">Ver más</button>
+          </div>
+        </div>
+
+        <div
+          class="item"
+          style="
+            background-image: url('producto1.png');
+          "
+          data-video="video1.mp4"
+        >
+          <div class="content">
+            <div class="name">Línea Athleisure de Lujo</div>
+            <div class="des">
+              Prendas de Punto y Sudaderas y Accesorios Premium.
+            </div>
+            <button class="seeMore">Ver más</button>
+          </div>
+        </div>
+
+        <div
+          class="item"
+          style="
+            background-image: url('producto2.png');
+          "
+        data-image="pro3.jpg">
+        
+          <div class="content">
+            <div class="name">Ropa Deportiva Híbrida (Performance Athleisure)</div>
+            <div class="des">
+              Leggings y Mallas Técnicas: suavidad y los tejidos característicos de Lululemon con la tecnología de gestión de la humedad de Adidas
+            </div>
+            <button class="seeMore">Ver más</button>
+          </div>
+        </div>
+
+        <div
+          class="item"
+          style= "
+            background-image: url('producto3.png'); 
+          background-position: 35%;" 
+           data-image="pro2.jpg">
+        
+          <div class="content">
+            <div class="name">Ropa Deportiva Híbrida</div>
+            <div class="des">
+              Chaqueta de Track y Capas Ligeras: Unirían el icónico estilo de las tres rayas de Adidas con el corte slim fit, los detalles minimalistas y los tejidos ultraligeros de Lululemon.
+            </div>
+            <button class="seeMore">Ver más</button>
+          </div>
+        </div>
+      </div>
+      <div class="button">
+        <button class="prev">◁</button>
+        <button class="next">▷</button>
+      </div>
+    </div>
+
+    
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+         <img id="modalImage" src="" alt="Producto" style="width: 100%; border-radius: 10px;">
+
+        <iframe id="videoFrame" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+ <script  src="./script.js"></script>
+</body>
+</html>
